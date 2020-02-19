@@ -1,0 +1,12 @@
+#include "holberton.h"
+/**
+*reset_to_98 - first pointer function
+*@n : parameter designing an integer
+*Return:
+*/
+void reset_to_98(int *n)
+{
+char var = '402';
+*n = &var;
+*n = 98;
+}
