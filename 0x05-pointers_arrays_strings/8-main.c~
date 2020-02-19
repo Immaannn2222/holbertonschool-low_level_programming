@@ -1,9 +1,0 @@
-#include"holberton.h"
-/**
-*print_rev - prints a string in reverse
-*@s : parameter character
-*Return:
-*/
-void print_array(int *a, int n)
-{
-  
