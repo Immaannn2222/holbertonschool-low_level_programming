@@ -4,15 +4,20 @@
 *@s : parameter character
 *Return:
 */
+
 void rev_string(char *s)
 {
-int i, j;
+int i, j, x = 0;
 i = 0;
 j = 0;
 char ch;
 while (s[i] != '\0')
 i++;
-for (j = 0; j <= (i - 1) / 2; j++)
+if (i % 2 == 0)
+x = i / 2;   
+else
+x = (i /2) + 1;
+for (j = 0; j <= x; j++)
 {
 ch = s[j];
 s[j] = s[i - 1 - j];
