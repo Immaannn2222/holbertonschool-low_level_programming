@@ -1,6 +1,6 @@
 #include"holberton.h"
 /**
-* _strncpy - copies two strings 
+* _strncpy - copies two strings
 * @src : parameter character
 * @dest : parameter character
 * @n : integer
@@ -18,7 +18,7 @@ for (i = 0; i < n && src[i] != '\0'; i++)
 dest[i] = src[i];
 }
 for (; i < n; i++)
-{  
+{
 dest[i] = '\0';
 }
 return (dest);
