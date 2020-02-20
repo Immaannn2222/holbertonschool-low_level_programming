@@ -1,6 +1,6 @@
 #include"holberton.h"
 /**
-* _stract - attach two strings together overwriting the null
+* _strcat - attach two strings together overwriting the null
 * @src : parameter character
 * @dest : parameter character
 *Return: dest
