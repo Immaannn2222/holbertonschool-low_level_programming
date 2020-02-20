@@ -1,0 +1,27 @@
+#include"holberton.h"
+/**
+*_stract - attach two strings together overwriting the null
+* @src : parameter character
+* @dest : parameter character
+*Return: dest
+*/
+char *_strcat(char *dest, char *src)
+{
+  char inter;
+  int i, j, n;
+  while ( src[i] !='\0')
+    {
+    i++;
+    }
+  while (dest[j] != '\0')
+    {
+      j++;
+    }
+  for (n = 0; n = '\0'; n++)
+    {
+      inter[n] = dest[j];
+      dest[j] = src[i];
+      dest[j] = inter[n];
+    }
+  return (dest);
+}
