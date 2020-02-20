@@ -7,13 +7,17 @@
 */
 char *cap_string(char *capi)
 {
-int i;
+int i = 0, j = 0;
+char s[] = {9, 10, 11, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 for (i = 0; capi[i] != '\0'; i++)
 {
-if (capi[i - 1] == 32 || capi[i - 1] == 46 || capi[i - 1] == 10)
+for (j = 0; s[j] != '\0'; j++)
+{
+if (capi[i - 1] == s[j])
 {
 if (capi[i] >= 97 && capi[i] <= 122)
 capi[i] = capi[i] - 32;
+}
 }
 }
 return (capi);
