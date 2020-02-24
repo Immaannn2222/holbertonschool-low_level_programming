@@ -3,7 +3,7 @@
  * set_string - a function that sets a pointer to pointer
  * @s:  pointer
  * @to: other pointere
- * Return: 
+ * Return:
  */
 void set_string(char **s, char *to)
 {
