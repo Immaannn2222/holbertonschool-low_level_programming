@@ -3,7 +3,7 @@
 *_strchr - Returns a pointer to the first occurrence of the character c in s
 *@s : a pointer
 *@c : a character
-*Return:Null
+*Return:0
 */
 char *_strchr(char *s, char c)
 {
@@ -16,5 +16,5 @@ s = &s[i];
 return (s);
 }
 }
-return (NULL);
+return (0);
 }
