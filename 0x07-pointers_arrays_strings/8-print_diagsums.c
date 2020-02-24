@@ -1,9 +1,10 @@
 #include "holberton.h"
-#include <stdio.h> 
+#include <stdio.h>
 /**
 *print_diagsums - prints the board of chess
 *@a: pointer
-*Return:a
+*@size : size of the array
+*Return:
 */
 void print_diagsums(int *a, int size)
 {
@@ -14,10 +15,10 @@ for (j = 0 ; j < size ; j++)
 {
 if (i == j)
 d1 += *a;
-if ((i+ j) == (size - 1))
+if ((i + j) == (size - 1))
 d2 += *a;
 a += 1;
 }
 }
-printf("%d, %d\n",d1,d2);
+printf("%d, %d\n", d1, d2);
 }
