@@ -14,8 +14,7 @@ if (s[i] == c)
 {
 s = &s[i];
 return (s);
-break;
 }
 }
-return (0);
+return (NULL);
 }
