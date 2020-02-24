@@ -1,0 +1,25 @@
+#include "holberton.h"
+/**
+*_strspn - returns n bytes
+*@s : parameter designing a character
+*@accept : kfoj
+*Return: s
+*/
+unsigned int _strspn(char *s, char *accept)
+{
+int i = 0, j = 0, x = 0;
+for (i = 0; i != '\0'; j++)
+{
+for (j = 0; j != '\0'; i++)
+{
+if (s[i] == accept[j])
+{
+x = x + 1;
+break;
+}     
+}
+if (s[i] != accept[j])
+break;
+}
+return (x);
+}
