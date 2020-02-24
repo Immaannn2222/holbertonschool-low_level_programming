@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
 *_strchr - Returns a pointer to the first occurrence of the character c in s
 *@s : a pointer
@@ -16,5 +17,5 @@ s = &s[i];
 return (s);
 }
 }
-return ('\0');
+return (NULL);
 }
