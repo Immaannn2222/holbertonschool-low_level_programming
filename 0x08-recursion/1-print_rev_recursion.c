@@ -10,6 +10,10 @@ if (*s != '\0')
 {
 s++;
 _print_rev_recursion(s--);
-_putchar(*s);
+result = _putchar(*s);
 }
+if (*result == *s)
+return (1);
+else
+return (0);
 }
