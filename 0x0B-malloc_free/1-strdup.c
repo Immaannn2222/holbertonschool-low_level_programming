@@ -16,14 +16,14 @@ return (NULL);
 }
 while (str[i] != '\0')
 i++;
-new = malloc((i + 1) * sizeof(char));
+new = malloc(i + 1);
 if (new == NULL)
 {
 return (NULL);
 }
 for (j = 0; j <= i; j++)
 {
-new[j] = str[j];
+str[j] = new[j];
 }
 new[j] = '\0';
 return (new);
