@@ -15,7 +15,7 @@ if (width < 1 || height < 1)
 return (NULL);
 else
 {
-s = malloc(height * sizeof(int));
+s = malloc(height * sizeof(int *));
 if (s == NULL)
 return (NULL);
 for (i = 0; i < height; i++)
