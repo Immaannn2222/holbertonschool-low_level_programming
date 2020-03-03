@@ -17,5 +17,10 @@ for (i = 1 ; i <= size; i++)
 {
 ar[i] = c;
 }
+if (size == 0)
+{
 return (0);
+}
+else 
+return (ar);
 }
