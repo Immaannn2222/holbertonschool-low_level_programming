@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
 *_strdup - returns a pointer to a newly allocated space in memory
@@ -8,23 +9,18 @@
 */
 char *_strdup(char *str)
 {
-char *new;
-unsigned int i, j;
+char *s;
+unsigned int i, j = 0;
 if (str == NULL)
-{
 return (NULL);
-}
 while (str[i] != '\0')
 i++;
-new = malloc(i + 1);
-if (new == NULL)
-{
+s = malloc((i + 1) * sizeof(char));
+if (s == NULL)
 return (NULL);
-}
 for (j = 0; j <= i; j++)
 {
-str[j] = new[j];
+s[j] = str[j];
 }
-new[j] = '\0';
-return (new);
+return (s);
 }
