@@ -18,7 +18,7 @@ ar[i] = c;
 }
 if (size == 0)
 {
-return ('NULL');
+return (0);
 }
 else
 return (ar);
