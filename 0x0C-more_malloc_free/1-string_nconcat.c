@@ -24,9 +24,13 @@ j++;
 s = malloc(sizeof(char) * (i + n) + 1);
 if (s == NULL)
 return (NULL);
-for (p = 0; p <= i; p++)
+for (p = 0; p < i; p++)
 s[p] = s1[p];
-for (p = 0; p <= n; p++)
+if (n >= j)
+{
+n = j;
+}
+for (p = 0; p < n; p++)
 s[p + i] = s2[p];
 s[i + n] = '\0';
 return (s);
