@@ -14,11 +14,11 @@ unsigned int i = 0;
 if ((nmemb == 0) || (size == 0))
 return (NULL);
 s = malloc(size * nmemb);
-for (i = 0; i <= nmemb; i++)
+if (s == NULL)
+return (NULL);
+for (i = 0; i < nmemb * size ; i++)
 {
 s[i] = 0;
 }
-if (s == NULL)
-return (NULL);
 return (s);
 }
