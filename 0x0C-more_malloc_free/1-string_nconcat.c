@@ -4,12 +4,12 @@
 *string_nconcat - concatenates two strings
 *@n : unsigned int
 *@s1 : string number 1
-*@s2 : string number 2 
+*@s2 : string number 2
 *Return: null
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int i = 0, p = 0, j =0;
+unsigned int i = 0, p = 0, j = 0;
 char *s;
 if (s1 != NULL)
 {
@@ -21,7 +21,7 @@ if (s2 != NULL)
 while (s2[j] != '\0')
 j++;
 }
-s = malloc(sizeof(char) * (i + n) +1);
+s = malloc(sizeof(char) * (i + n) + 1);
 if (s == NULL)
 return (NULL);
 for (p = 0; p < i; p++)
