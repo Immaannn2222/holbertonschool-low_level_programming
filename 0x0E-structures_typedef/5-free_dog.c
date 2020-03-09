@@ -8,7 +8,5 @@ void free_dog(dog_t *d)
 {
 if (d != NULL)
 {
-free((*newer).name);
-free((*newer).owner);
 free(d);
 }
