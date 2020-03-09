@@ -21,11 +21,11 @@ void print_dog(struct dog *d);
 *@age : age of the dog
 *@owner : who's his owner
 */
-typedef struct dog_t
+typedef struct
 {
 char *name;
 float age;
 char *owner;
-};
+} dog_t;
 
 #endif
