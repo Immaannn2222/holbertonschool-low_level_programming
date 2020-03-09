@@ -6,6 +6,9 @@
 */
 void free_dog(dog_t *d)
 {
-free(newer[j]);
+if (d != NULL)
+{
+free((*d).name);
+free((*d).owner);
 free(d);
 }
