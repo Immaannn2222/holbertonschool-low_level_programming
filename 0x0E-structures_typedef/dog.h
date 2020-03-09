@@ -15,4 +15,17 @@ char *owner;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 
+/**
+*struct dog_t - a similar one to previously done
+*@name : its name
+*@age : age of the dog
+*@owner : who's his owner
+*/
+typedef struct dog_t
+{
+char *name;
+float age;
+char *owner;
+};
+
 #endif
