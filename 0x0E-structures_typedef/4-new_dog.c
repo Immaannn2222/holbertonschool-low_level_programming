@@ -42,17 +42,18 @@ free(newer);
 return (NULL);
 }
 (*newer).name = _strdup(name);
-(*newer).owner = _strdup(owner);
 if ((*newer).name == NULL)
 {
 free(newer);
 return (NULL);
 }
+(*newer).owner = _strdup(owner);
 if ((*newer).owner == NULL)
 {
 free(newer);
+free((*newer).name);
 return (NULL);
 }
-(void)age;
+(*newer).age = age;
 return (newer);
 }
