@@ -1,9 +1,14 @@
 #ifndef TASK_3
 #define TASK_3
+/**
+*struct op - a structure for use
+*@op: par1
+*@o : the different operators
+*/
 typedef struct op
 {
 char *op;
-int (*f)(int a, int b);
+int (*o)(int a, int b);
 } op_t;
 int op_add(int a, int b);
 int op_sub(int a, int b);

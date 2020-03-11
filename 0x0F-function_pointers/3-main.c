@@ -23,6 +23,6 @@ exit(99);
 x = atoi(argv[1]);
 y = atoi(argv[3]);
 result = (*get_op_func(argv[2])) (x, y);
-printf("%d\n",result);
+printf("%d\n", result);
 return (0);
 }
