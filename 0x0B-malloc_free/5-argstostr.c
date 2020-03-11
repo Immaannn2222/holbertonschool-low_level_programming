@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-*alloc_grid - returns a pointer t
-*@width: int
-*@height: int
+*argtostr - double pointer
+*@ac: int
+*@av: array of an array
 *
 *Return: null
 */
@@ -11,12 +11,8 @@ char *argstostr(int ac, char **av)
 {
 char *s;
 int i;
-if ((av == NULL) || (ac == 0))
+if (av == 0 || (ac == 0))
 return (NULL);
-s = malloc (sizeof(char) * ac);
-if (s == NULL)
-return (NULL);
-else 
 for (i = 0; i < ac; i++)
-return (av);
+
 }
