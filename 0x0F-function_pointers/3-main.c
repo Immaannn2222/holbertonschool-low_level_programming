@@ -1,4 +1,6 @@
 #include"3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
 *main - the main function that will operate
 *@argc : number of arguments
@@ -20,6 +22,6 @@ exit(99);
 }
 x = atoi(argv[1]);
 y = atoi(argv[3]);
-result = (get_op_func(argv[2])(x, y);
+result = (*get_op_func(argv[2])) (x, y);
 return (result);
 }

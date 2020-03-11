@@ -1,5 +1,6 @@
 #include"3-calc.h"
 #include <stdlib.h>
+#include<stdio.h>
 /**
 *op_add - a fuction to sum up 2 integers
 *@a : an integer
@@ -19,10 +20,7 @@ return (a + b);
 */
 int op_sub(int a, int b)
 {
-if (a > b)
 return (a - b);
-else
-(-(a - b));
 }
 
 /**
@@ -58,7 +56,7 @@ return (a / b);
 *@b : an intege
 *Return: resd
 */
-int op_mod(int a, int b);
+int op_mod(int a, int b)
 {
 if (b == 0)
 {
