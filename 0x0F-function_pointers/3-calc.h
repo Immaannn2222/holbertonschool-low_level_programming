@@ -3,7 +3,7 @@
 /**
 *struct op - a structure for use
 *@op: par1
-*@o : the different operators
+*@f : the different operators
 */
 typedef struct op
 {
