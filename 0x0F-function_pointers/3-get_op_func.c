@@ -20,7 +20,7 @@ int i = 0;
 while (i < 5)
 {
 if (*ops[i].op == *s)
-return (ops[i].o);
+return (ops[i].f);
 i++;
 }
 printf("Error\n");
