@@ -15,10 +15,11 @@ if (argc != 4)
 printf("Error\n");
 exit(98);
 }
-if (argv[2][1])
+
+if (*argv[3] == '0' && (*argv[2] == *div || *argv[2] == *mod))
 {
-	printf("Error\n");
-	exit(99);
+printf("Error\n");
+exit(100);
 }
 x = atoi(argv[1]);
 y = atoi(argv[3]);
