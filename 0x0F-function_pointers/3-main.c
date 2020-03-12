@@ -9,6 +9,8 @@
 */
 int main(int argc, char *argv[])
 {
+char *div = "/";
+char *mod = "%";
 int x, y, result = 0;
 if (argc != 4)
 {
