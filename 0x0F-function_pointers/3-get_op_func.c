@@ -23,7 +23,4 @@ if (*ops[i].op == *s)
 return (ops[i].f);
 i++;
 }
-printf("Error\n");
-exit(99);
-return (NULL);
 }
