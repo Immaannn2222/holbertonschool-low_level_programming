@@ -19,7 +19,7 @@ while (i < n)
 arr = va_arg(args, char*);
 if (arr == NULL)
 {
-printf("nil");
+printf("(nil)");
 }
 printf("%s", arr);
 if (i != n - 1 && separator != NULL)
