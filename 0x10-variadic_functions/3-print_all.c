@@ -12,10 +12,9 @@ void print_all(const char * const format, ...)
 va_list arr;
 char *p, *s;
 int i;
-float f;
+double f;
 va_start(arr, format);
-p = format;
-while (*p != NULL && *p != '%')
+while (*p != '\0' && *p != '%')
 {
 p++;
 {
@@ -23,15 +22,17 @@ p++;
         continue;
 }
 {
-if (p == i)
+if (*p == i)
+{
 i = va_arg(arr, int);
 printf("%d", i);
 break;
+}
 else
-f = va_arg(arr, float)
+f = va_arg(arr, double);
 printf("%f",f);
 break;
-while (*s != NULL)
+while (*s != '\0')
 s = va_arg(arr, char*);
 s++;
 break;
