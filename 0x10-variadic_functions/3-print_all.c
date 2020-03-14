@@ -18,8 +18,8 @@ while (*p != '\0' && *p != '%')
 {
 p++;
 {
-        putchar(*p);
-        continue;
+putchar(*p);
+continue;
 }
 {
 if (*p == i)
@@ -30,7 +30,7 @@ break;
 }
 else
 f = va_arg(arr, double);
-printf("%f",f);
+printf("%f", f);
 break;
 while (*s != '\0')
 s = va_arg(arr, char*);
