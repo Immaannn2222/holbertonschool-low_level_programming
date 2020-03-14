@@ -14,13 +14,11 @@ int arr;
 unsigned int i = 0;
 va_list args;
 va_start(args, n);
-if (separator == NULL)
-return;
 while (i < n)
 {
 arr = va_arg(args, unsigned int);
 printf("%d", arr);
-if (i != n - 1)
+if (i != n - 1 && separator != NULL)
 printf("%s", separator);
 i++;
 }
