@@ -14,8 +14,6 @@ char *arr;
 unsigned int i = 0;
 va_list args;
 va_start(args, n);
-if (separator == NULL)
-return;
 while (i < n)
 {
 arr = va_arg(args, char*);
@@ -24,7 +22,7 @@ if (arr == NULL)
 printf("nil");
 }
 printf("%s", arr);
-if (i != n - 1)
+if (i != n - 1 && separator != NULL)
 printf("%s", separator);
 i++;
 }
