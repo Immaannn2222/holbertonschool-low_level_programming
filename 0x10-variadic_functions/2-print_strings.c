@@ -21,7 +21,7 @@ if (arr == NULL)
 printf("nil");
 else
 printf("%s", arr);
-if (i != n - 1 && separator != NULL)
+if (separator && i != n - 1)
 printf("%s", separator);
 }
 printf("\n");
