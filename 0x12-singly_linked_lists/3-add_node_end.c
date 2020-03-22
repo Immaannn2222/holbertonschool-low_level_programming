@@ -12,6 +12,7 @@ list_t *new_end;
 list_t *final;
 unsigned int i;
 new_end = malloc(sizeof(list_t));
+final = *head;
 if (new_end == NULL)
 return (NULL);
 new_end->str = strdup(str);
@@ -26,7 +27,7 @@ if (*head == NULL)
 return (new_end);
 }
 else
-while (final != NULL)
+while (final->next != NULL)
 final = final->next;
 final->next = new_end;
 return (new_end);
