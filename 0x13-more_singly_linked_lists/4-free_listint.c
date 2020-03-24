@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
- * free_listint - frees a list
- * @head: the lsit
+ * free_listint - frees up a list
+ * @head: the list concerned
  *
  * Return: void
  */
@@ -11,7 +11,6 @@ listint_t *trav;
 while (head != NULL)
 {
 trav = head->next;
-free(head->str);
 free(head);
 head = trav;
 }
