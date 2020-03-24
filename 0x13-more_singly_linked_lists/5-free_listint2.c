@@ -14,7 +14,7 @@ if (head != NULL)
 while (*head != NULL)
 {
 trav = (*head)->next;
-free(head);
+free(*head);
 *head = trav;
 }
 *head = NULL;
