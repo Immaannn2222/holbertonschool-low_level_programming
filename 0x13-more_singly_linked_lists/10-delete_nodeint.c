@@ -30,5 +30,5 @@ if (i < index)
 return (-1);
 further->next = tmp->next;
 free(tmp);
-return (-1);
+return (1);
 }
