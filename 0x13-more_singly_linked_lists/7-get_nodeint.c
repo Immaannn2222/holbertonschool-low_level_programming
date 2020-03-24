@@ -8,12 +8,13 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-listint_t *trav = head;
-while (trav != NULL)
+unsigned int n = 0;
+while (head != NULL)
 {
-if (trav->n == index)
-return (trav);
-trav = trav->next;
+if (n == index)
+return (head);
+head = head->next;
+n++;
 }
 return (NULL);
 }
