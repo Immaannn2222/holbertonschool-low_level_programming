@@ -19,15 +19,15 @@ if (index == 0)
 free(tmp);
 return (1);
 }
-while (tmp != NULL && i < index)
+while (tmp->next != NULL && i < index)
 {
+further = tmp;
 tmp = tmp->next;
 i++;
 }
-if (tmp == NULL || tmp->next == NULL)
+if (i < index)
 return (-1);
-further = tmp->next->next;
-free(tmp->next);
-tmp->next = further;
-return (1);
+further->next = tmp->next;
+free(tmp);
+return (-1);
 }
