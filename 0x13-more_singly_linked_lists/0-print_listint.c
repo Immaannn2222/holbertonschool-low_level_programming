@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
-* print_listint - prints a list
-* @h: parameter
+* print_listint - prints a list using a pre-defined structure
+* @h: parameter pointing to the nodes of list
 *
 * Return: number of nodes
 */
