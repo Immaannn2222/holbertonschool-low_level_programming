@@ -14,7 +14,7 @@ while (x)
 c += x & 1;
 x >>= 1;
 }
-return (x);
+return (c);
 }
 /**
  * flip_bits - returns number of flips needed to transform n to m
