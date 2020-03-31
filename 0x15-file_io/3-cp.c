@@ -10,8 +10,7 @@
 
 int main (int argc, char *argv[])
 {
-int file_to = 0, file_from = 0;
-char buffer[1024];
+int file_to, file_from;
 if (argc != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -27,12 +26,6 @@ file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 if (file_to == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-exit(99);
-}
-file_to =  write(file_from, buffer, 1024);
-if (file_to == -1)
-{
-dprintf(" Error: Can't write to %s\n", argv[2]);
 exit(99);
 }
 return (0);
