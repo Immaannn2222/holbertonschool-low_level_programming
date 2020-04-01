@@ -27,17 +27,12 @@ if (w == -1)
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]), exit(98);
 }
 m = close(file_to);
-n = close(file_from);
 if (m == -1)
-dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]), exit(100);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 if (n == -1)
-dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[1]), exit(100);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 return (0);
 }
-
-
-
-
 
 
 
