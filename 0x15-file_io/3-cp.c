@@ -29,6 +29,7 @@ dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]), exit(98);
 m = close(file_to);
 if (m == -1)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
+n = close(file_from);
 if (n == -1)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 return (0);
