@@ -19,6 +19,7 @@ new_end->n = n;
 new_end->next = NULL;
 if (*head == NULL)
 {
+new_end->prev = NULL;
 *head = new_end;
 return (new_end);
 }
