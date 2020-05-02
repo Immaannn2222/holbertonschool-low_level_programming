@@ -24,8 +24,11 @@ new_end->prev = NULL;
 return (new_end);
 }
 else
+{
 while (final->next != NULL)
 final = final->next;
 final->next = new_end;
+new_end->prev = final;
+}
 return (new_end);
 }
