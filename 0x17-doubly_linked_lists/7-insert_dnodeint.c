@@ -19,6 +19,8 @@ if (new == NULL)
 return (NULL);
 }
 new->n = n;
+new->next = NULL;
+new->prev = NULL;
 if (idx == 0)
 {
 new->next = *h;
@@ -26,15 +28,21 @@ new->next = *h;
 return (new);
 }
 tmp = *h;
-while (i != idx - 1 && tmp != NULL)
+while (tmp != NULL)
 {
-tmp = tmp->next;
-i++;
-if (tmp == NULL)
-return (NULL);
-}
-new->next = (tmp)->next;
-(tmp)->next = new;
+if (i == idx - 1)
+{
+new->next = tmp->next;
+new->n = n;
+new->prev = tmp;
+tmp->next = new;
+if (new->next != NULL)
+new->next->prev = new;
 return (new);
+}
+i++;
+tmp = (tmp)->next;
+}
+return (NULL);
 }
 
