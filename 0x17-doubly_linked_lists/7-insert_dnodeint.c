@@ -14,7 +14,7 @@ dlistint_t *new = NULL;
 dlistint_t *tmp = *h;
 unsigned int i = 0;
 new = malloc(sizeof(dlistint_t));
-if (new == NULL)
+if (new == NULL || (*h == NULL && idx != 0))
 {
 return (NULL);
 }
