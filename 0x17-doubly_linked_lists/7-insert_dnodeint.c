@@ -28,7 +28,7 @@ new->next = *h;
 return (new);
 }
 tmp = *h;
-while (tmp != NULL)
+while (tmp)
 {
 if (i == idx - 1)
 {
