@@ -23,14 +23,16 @@ if (idx == 0)
 {
 return (add_dnodeint(h, n));
 }
-while (tmp != NULL)
+while (tmp)
 {
-if (i == idx - 1)
+if (i == idx)
 {
 new->next = tmp;
 new->prev = tmp->prev;
 tmp->prev->next = new;
 tmp->prev = new;
+if (new->next != NULL)
+new->next->prev = new;
 return (new);
 }
 i++;
