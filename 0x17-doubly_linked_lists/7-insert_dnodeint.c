@@ -23,10 +23,6 @@ if (idx == 0)
 {
 return (add_dnodeint(h, n));
 }
-if (i == idx)
-{
-return (add_dnodeint_end(h, n));
-}
 while (tmp)
 {
 if (i == idx)
@@ -39,6 +35,10 @@ return (new);
 }
 i++;
 tmp = tmp->next;
+}
+if (i == idx)
+{
+return (add_dnodeint_end(h, n));
 }
 return (NULL);
 }
