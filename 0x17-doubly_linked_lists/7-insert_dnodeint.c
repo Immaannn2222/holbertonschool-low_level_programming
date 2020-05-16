@@ -14,7 +14,7 @@ dlistint_t *new = NULL;
 dlistint_t *tmp = *h;
 unsigned int i = 0;
 new = malloc(sizeof(dlistint_t));
-if (new == NULL)
+if (new == NULL || (*h == NULL && idx != 0))
 {
 return (NULL);
 }
@@ -23,19 +23,18 @@ if (idx == 0)
 {
 return (add_dnodeint(h, n));
 }
-if (i == idx)
-return (add_dnodeint_end(h, n));
-while (i != idx - 1 && tmp != NULL)
+while (tmp != NULL)
 {
-tmp = tmp->next;
-i++;
-if (tmp == NULL)
-return (NULL);
-}
+if (i == idx - 1)
+{
 new->next = tmp;
 new->prev = tmp->prev;
 tmp->prev->next = new;
 tmp->prev = new;
 return (new);
 }
-
+i++;
+tmp = tmp->next;
+}
+return (NULL);
+}
