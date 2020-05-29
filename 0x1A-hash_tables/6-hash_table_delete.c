@@ -20,11 +20,11 @@ for (i = 0; i < ht->size ; i++)
 new = ht->array[i];
 while (new != NULL)
 {
-tmp = new;
-new = new->next;
-free(tmp->key);
-free(tmp->value);
-free(tmp);
+tmp = new->next;
+free(new->key);
+free(new->value);
+free(new);
+new = tmp;
 }
 }
 free(ht->array);
