@@ -30,4 +30,5 @@ free(t);
 }
 free(ht->array);
 free(ht);
+return;
 }
