@@ -23,6 +23,10 @@ if (strcmp(ht->array[idx]->key, key) == 0)
 ht->array[idx]->value = strdup(value);
 return (1);
 }
+else
+{
+ht->array[idx] = ht->array[idx]->next;
+}
 }
 new = malloc(sizeof(hash_node_t *));
 if (new == NULL)
