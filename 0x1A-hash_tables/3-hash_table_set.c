@@ -26,23 +26,14 @@ l->value = strdup(value);
 return (1);
 }
 else
-{
 l = l->next;
-}
 }
 new = malloc(sizeof(hash_node_t *));
 if (new == NULL)
 return (0);
 new->key = strdup(key);
 new->value = strdup(value);
-if (l == NULL)
-{
-new->next = NULL;
-}
-else
-{
-new->next = l;
-}
-l = new;
+new->next = ht->array[idx];
+ht->array[idx] = new;
 return (1);
 }
