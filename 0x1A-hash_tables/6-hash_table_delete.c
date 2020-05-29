@@ -10,7 +10,7 @@
 void hash_table_delete(hash_table_t *ht)
 {
 hash_node_t *tmp = NULL, *new = NULL;
-unsigned long int i = 0;
+unsigned long int i;
 
 if (ht == NULL)
 return;
@@ -20,11 +20,11 @@ for (i = 0; i < ht->size ; i++)
 new = ht->array[i];
 while (new != NULL)
 {
-tmp = new->next;
-free(new->key);
-free(new->value);
-free(new);
-new = tmp;
+tmp = new;
+new = new->next;
+free(tmp->key);
+free(tmp->value);
+free(tmp);
 }
 }
 free(ht->array);
