@@ -29,4 +29,5 @@ new = tmp;
 }
 free(ht->array);
 free(ht);
+return;
 }
