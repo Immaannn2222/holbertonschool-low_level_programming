@@ -9,10 +9,10 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-hash_node_t *new, *l;
+hash_node_t *new = NULL, *l = NULL;
 unsigned long int idx = 0;
 idx = key_index((const unsigned char *)key, ht->size);
-if (ht == NULL || key == NULL || value == NULL)
+if (ht == NULL || key == NULL)
 {
 return (0);
 }
@@ -33,7 +33,7 @@ if (new == NULL)
 return (0);
 new->key = strdup(key);
 new->value = strdup(value);
-new->next = ht->array[idx];
-ht->array[idx] = new;
+new->next = l;
+l = new;
 return (1);
 }
